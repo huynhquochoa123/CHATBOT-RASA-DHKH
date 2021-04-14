@@ -1,0 +1,72 @@
+version: "2.0"
+
+stories:
+- story: Greet
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- story: graduation/ask_time
+  steps:
+  - intent: graduation_ask_time
+  - action: action_graduation_ask_time
+
+- story: goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: praise
+  steps:
+  - intent: praise
+  - action: utter_praise
+
+- story: thanks
+  steps:
+  - intent: thankyou
+  - action: utter_thankyou
+
+- story: decry
+  steps:
+  - intent: decry
+  - action: utter_decry
+
+- story: graduation/condition
+  steps:
+  - intent: graduation_condition
+  - action: utter_graduation_condition
+
+- story: graduation_cetificate
+  steps:
+  - intent: graduation_cetificate
+  - action: utter_graduation_cetificate
+
+- story: schoolarship/condition
+  steps:
+  - intent: schoolarship_condition
+  - action: utter_schoolarship_condition
+
+- story: schoolarship/type
+  steps:
+  - intent: schoolarship_type
+  - action: utter_shoolarship_type
+
+- story: point
+  steps:
+  - intent: point
+  - action: action_ask_point
+
+- story: hoc_phan/dang_ki
+  steps:
+  - intent: hoc_phan_dang_ki
+  - action: utter_hoc_phan_dang_ki
+
+- story: hoc_phan/huy
+  steps:
+  - intent: hoc_phan_huy
+  - action: utter_hoc_phan_huy
+
+- story: ask_ability
+  steps:
+  - intent: ask_ability
+  - action: utter_ask_ability

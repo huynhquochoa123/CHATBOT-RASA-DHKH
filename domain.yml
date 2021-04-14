@@ -1,0 +1,78 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - ask_ability
+  - thankyou
+  - praise
+  - decry
+  - graduation_ask_time
+  - graduation_cetificate
+  - graduation_condition
+  - schoolarship_condition
+  - schoolarship_type
+  - point
+  - hoc_phan_dang_ki
+  - hoc_phan_huy
+
+responses:
+  utter_greet:
+  - text: Chào bạn, Mình có thể giúp gì được cho bạn
+
+  utter_goodbye:
+  - text: Tạm biệt bạn !, Nếu bạn có thắc mặt gì hãy nhắn tin cho mình.\n Mình có thể giúp bạn bất cứ khi nào
+
+  utter_ask_ability:
+  - text: Mình có thể trả lời cho bạn về thông tin tốt nghiệp, đăng kí học phần, học bổng và điểm tích lũy .
+
+  utter_praise:
+  - text:  hì hì, bạn quá khen rồi ạ
+
+  utter_decry:
+  - text: Xin lỗi bạn mình chưa đủ thông minh ạ !
+
+  utter_thankyou:
+  - text: Không có gì nhé .
+
+  utter_graduation_cetificate:
+  - text: 3 loại chứng chỉ bạn cần có đó là chứng chỉ tiếng anh b1, chứng chỉ giáo dục quốc phòng, chứng chỉ thể dục nhé
+
+  utter_graduation_condition:
+  - text: Điều điện đó là bạn tích lũy đủ số tín chỉ, mà đủ các loại chứng chỉ cần thiết
+
+  utter_schoolarship_condition:
+  - text:  Để đủ điều kiện xét cấp học bổng khuyến khích học tập SV phải đăng ký tối thiểu 14 tín chỉ / 01 học kỳ (xem mục 4 của điều này).
+
+  utter_shoolarship_type:
+  - text: Các loại học bổng (học bổng ở cuối mỗi học kì, học bổng từ các doanh nghiệp, ...) Bạn theo dõi trên trang tín chỉ để biết thêm nhé .
+
+  utter_hoc_phan_dang_ki:
+  - text: Đăng kí học phần trên trang tín chỉ
+
+  utter_hoc_phan_huy:
+  - text: Bạn lên phòng đào tạo để hủy học phần nhé, thời hạn hủy là 2 tuần sau khi học chính thức
+
+  utter_fallback:
+    - text: Em xin lỗi, em chưa hiểu ý muốn của anh(chị) ạ. Anh chị có thể nói lại được không ạ
+
+actions:
+- utter_greet
+- utter_goodbye
+- utter_ask_ability
+- utter_praise
+- utter_decry
+- utter_thankyou
+- action_graduation_ask_time
+- utter_graduation_cetificate
+- utter_graduation_condition
+- utter_schoolarship_condition
+- utter_schoolarship_type
+- action_ask_point
+- utter_hoc_phan_dang_ki
+- utter_hoc_phan_huy
+- utter_fallback
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

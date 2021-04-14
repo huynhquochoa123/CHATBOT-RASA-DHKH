@@ -1,0 +1,187 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - chào bot
+    - hi
+    - hello bot
+    - chào admin
+    - bắt đầu
+    - moin
+    - hey there
+    - bot ơi, cho mình hỏi
+    - bot ơi
+    - cho mình hỏi chút
+    - admin ơi cho mình hỏi với
+    - anh ơi
+    - em ơi
+    - chào ad
+    - chào bạn
+    - hi bot
+    - hey
+    - chào bot ạ
+
+- intent: goodbye
+  examples: |
+    - tạm biệt bot
+    - tạm biệt
+    - good by
+    - see you later
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: ask_ability
+  examples: |
+    - bot có thể làm những gì nhỉ
+    - bạn  có chức năng gì?
+    - bot giúp gì được anh không ?
+    - bot có thể giúp gì cho anh ?
+    - bot hỗ trợ bạn như thế nào ?
+    - cho anh xem các chức năng của em
+    - khả năng của bot là gì
+
+- intent: thankyou
+  examples: |
+    - cảm ơn em nhá
+    - thanks em nha
+    - cảm ơn nha
+    - good job
+    - thank you
+    - cảm ơn bot nha
+    - thanks bot
+    - cảm ơn
+    - thank you so much
+    - great! Thanks
+
+- intent: praise
+  examples: |
+    - bot giỏi quá
+    - great
+    - awsome
+    - bot làm tốt lắm
+    - ui giỏi thế
+    - bot thông minh
+    - đẹp trai đấy
+    - Ênm đệnp léăm
+
+- intent: decry
+  examples: |
+    - quá tệ
+    - ngu ngốc
+    - chả biết gì cả
+    - ngu thật
+    - dở ghê
+    - có thế mà cũng không biết
+    - kém cói
+
+# THông tin tốt nghiệp
+- intent: graduation_ask_time
+  examples: |
+    - thòi gian tốt nghiệp là tháng mấy ạ
+    - thời gian nhận bằng tốt nghiệp là tháng mấy ạ
+    - thời gian tốt nghiệp
+    - thời gian xét tốt nghiệp
+    - tháng mấy ra trường
+
+- intent: graduation_cetificate
+  examples: |
+    - em có đăng kí bên trường ngoại ngữ hiện tại a1, nhưng em có băng toeic 450đ . không biết có thể thay thế để ra trường được không
+    - chứng chỉ tin học cần loại nào để tốt nghiệp
+    - Nếu sinh viên chưa hoàn thành một trong các chứng chỉ về giáo dục quốc phòng, thể dục thể chất hoặc ngoại ngữ không chuyên thì sẽ như thế nào ?
+    - các loại chứng chỉ cần thiết để tốt nghỉệp
+    - các loại giấy tờ, chứng chỉ để xét tốt nghiệp
+
+- intent: graduation_condition
+  examples: |
+    - điều kiện để tốt nghiệp đúng hạn
+    - điều kiện tốt nghiêp
+    - như nào là tốt nghiệp được ạ
+    - Điều kiện để được tốt nghiệp bao gồm những gì?
+    - làm sao để tốt nghiệp đúng hạn
+    - cách thức đăng kí tốt nghiệp như nào
+    - mức điểm tốt nghiệp
+    - mức điểm phân loại học lực tốt nghiệp
+
+# End thông tin tốt nghiệp
+
+# Schoolarship (Học bổng)
+- intent: schoolarship_condition
+  examples: |
+    - Điều kiện để nhận học bổng của trường là gì vậy
+    - cho mình hỏi ,số sinh viên đạt học bổng dựa vào tích lũy mỗi học kì .Vậy xếp theo điểm đạt từ cao xuống thấp theo từng khóa hay từng lớp hay cả khoa ?
+    - Tiêu chí để xét học bổng?
+    - Mức học bổng là bao nhiêu
+    - Những tiêu chí học bổng cụ thể chi tiết? Cho từng ngành (nếu có)
+    - Các yêu cầu tối thiểu để có học bổng
+    - Học bổng của mỗi kì sẽ được tính như thế nào ?
+    - Nếu một học kì có đăng ký số môn học nhiều hơn so với chương trình đào tạo thì học bổng được tính như thế nào ?
+    - Làm sao để có học bổng đại học ?
+    - Học bổng trường năm này kì này cần bao nhiêu điểm để có
+    - Tiêu chí để xét học bổng ?
+    - Cách lựa chọn sinh viên để đạt được học bổng là như thế nào ?
+    - Đối với học bổng khuyến khích học tập thì số lượng sinh viên của từng khoa là bao nhiêu ?
+    - Học bổng tính điểm của từng học kì hay là tính điểm trung bình tích luỹ ?
+
+- intent: schoolarship_type
+  examples: |
+    - Có những loại học bổng nào ?
+    - Có nhưng loại học bổng nào dành cho sinh viên
+    - Thông tin học bổng
+    - Có những suất học bổng nào
+    - Có những học bổng nào khác ngoài học bổng ở trường không ?
+    - Học bổng có bao nhiêu loại
+    - Trong trường hiện có bao nhiều loại học bổng ?
+    - các loại học bổng của doanh nghiệp
+# End of Schoolarship
+
+# Point
+- intent: point
+  examples: |
+    - Cho em hỏi điểm tích luỹ đúng 2.5 vẫn khá đúng ko ạ ?
+    - Cho mình hỏi về điểm tích lũy với
+    - Điểm tích luỹ bao nhiêu được bằng xuất sắc
+    - Điểm tích luỹ mấy chấm là bằng khá, mấy chấm là bằng giỏi
+    - Với điểm số các môn hiện giờ là 9 8 7 6 thì mình có điểm tích lũy là bao nhiêu
+    - cách tính điểm tích lũy như thế nào?
+    - điểm trung bình tích lũy là gì?
+    - Điểm tích lũy là gì và làm sao để có vậy ạ
+    - cách tính điểm tích lũy
+    - cách thức để có thể tính điểm tích lũy
+
+# End point
+
+# Học phần
+- intent: hoc_phan_dang_ki
+  examples: |
+    - đăng kí học phần
+    - Cách đăng kí học phần như thế nào
+    - Có thể đăng ký trễ hạn khi chưa học môn đó không
+    - Cho em hỏi 1 kì chỉ đăng kí tối đa được 21 chỉ thôi phải ko ạ ?
+    - Cho em hỏi làm sao để đăng kí học phần ạ.
+    - em không biết cách đăng kí học phần
+    - cách đăng kí học phần
+    - quy trình đăng kí học phần
+    - Có thể đăng ký được các học phần ngoài chương trình đào tạo không ?
+    - Cho em hỏi một học kì đăng kí bao nhiêu chính chỉ là đủ?
+    - Nếu không đăng ký học phần được thì phải làm sao?
+    - Thời gian đăng ký trễ hạn là bao nhiều ngày tính từ ngày kết thúc đăng ký online ?
+
+- intent: hoc_phan_huy
+  examples: |
+    - Làm sao để huỷ một học phần?
+    - Quy trình hủy học phần
+    - Sau khi đăng kí học phần, làm thế nào để hủy nếu không muốn học
+    - thời gian hủy học phần là bao lâu
+    - Hủy học phần vào thời gian nào
+    - Hủy học phần bị trùng lịch
+    - Tôi không thể hủy học phần
+    - Làm sao để hủy học phần mà không muốn học
+    - Làm thế nào để hủy học phần
+    - hủy học phần
+
+# End học phần
