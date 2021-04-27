@@ -104,8 +104,8 @@ nlu:
     - Điều kiện để được tốt nghiệp bao gồm những gì?
     - làm sao để tốt nghiệp đúng hạn
     - cách thức đăng kí tốt nghiệp như nào
-    - mức điểm tốt nghiệp
-    - mức điểm phân loại học lực tốt nghiệp
+    - [mức điểm](score_graduation) tốt nghiệp
+    - [mức điểm phân loại](score_graduation:classification) học lực tốt nghiệp
 
 # End thông tin tốt nghiệp
 
@@ -170,6 +170,8 @@ nlu:
     - Cho em hỏi một học kì đăng kí bao nhiêu chính chỉ là đủ?
     - Nếu không đăng ký học phần được thì phải làm sao?
     - Thời gian đăng ký trễ hạn là bao nhiều ngày tính từ ngày kết thúc đăng ký online ?
+    - Hình thức đăng kí học phần thế nào ?
+    - Hình thức đăng kí học phần
 
 - intent: hoc_phan_huy
   examples: |

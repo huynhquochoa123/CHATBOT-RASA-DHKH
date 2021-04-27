@@ -9,7 +9,7 @@ stories:
 - story: graduation/ask_time
   steps:
   - intent: graduation_ask_time
-  - action: action_graduation_ask_time
+  - action: utter_graduation_ask_time
 
 - story: goodbye
   steps:
@@ -34,7 +34,7 @@ stories:
 - story: graduation/condition
   steps:
   - intent: graduation_condition
-  - action: utter_graduation_condition
+  - action: action_graduation_condition
 
 - story: graduation_cetificate
   steps:
@@ -54,17 +54,19 @@ stories:
 - story: point
   steps:
   - intent: point
-  - action: action_ask_point
+  - action: utter_ask_point
 
 - story: hoc_phan/dang_ki
   steps:
   - intent: hoc_phan_dang_ki
   - action: utter_hoc_phan_dang_ki
+  - action: utter_condition_hoc_phan_dang_ki
 
 - story: hoc_phan/huy
   steps:
   - intent: hoc_phan_huy
   - action: utter_hoc_phan_huy
+  - action: utter_condition_hoc_phan_huy
 
 - story: ask_ability
   steps:
