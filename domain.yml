@@ -93,7 +93,7 @@ responses:
           nghiệp vào các tháng 2, 6 và 10."
 
   utter_fallback:
-    - text: Em xin lỗi, em chưa hiểu ý muốn của anh(chị) ạ. Anh chị có thể nói lại được không ạ
+    - text: Xin lỗi, Admin chưa hiểu ý muốn của bạn. Bạn có thể hỏi rõ lại được không ?
 
 actions:
 - utter_greet
