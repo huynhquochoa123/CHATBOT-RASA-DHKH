@@ -55,6 +55,7 @@ stories:
   steps:
   - intent: point
   - action: utter_ask_point
+  - action: utter_ask_point_1
 
 - story: hoc_phan/dang_ki
   steps:
