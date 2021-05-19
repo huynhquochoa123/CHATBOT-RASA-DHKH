@@ -18,33 +18,34 @@ intents:
 
 responses:
   utter_greet:
-  - text: Chào bạn, Mình có thể giúp gì được cho bạn
+  - text: "Chào bạn, Mình có thể giúp gì được cho bạn"
 
   utter_goodbye:
-  - text: Tạm biệt bạn !, Nếu bạn có thắc mặt gì hãy nhắn tin cho mình.\n Mình có thể giúp bạn bất cứ khi nào
+  - text: "Tạm biệt bạn !, Nếu bạn có thắc mặt gì hãy nhắn tin cho mình.\n Mình có thể giúp bạn bất cứ khi nào"
 
   utter_ask_ability:
-  - text: Mình có thể trả lời cho bạn về thông tin tốt nghiệp, đăng kí học phần, học bổng và điểm tích lũy .
+  - text: "Mình có thể trả lời cho bạn về thông tin tốt nghiệp, đăng kí học phần, học bổng và điểm tích lũy ."
 
   utter_praise:
-  - text:  hì hì, bạn quá khen rồi ạ
+  - text:  "hì hì, bạn quá khen rồi ạ"
 
   utter_decry:
-  - text: Xin lỗi bạn mình chưa đủ thông minh ạ !
+  - text: "Xin lỗi bạn mình chưa đủ thông minh ạ !"
 
   utter_thankyou:
-  - text: Không có gì nhé .
+  - text: "không có gì đâu bạn, Nếu bạn có thắc mắc gì thì hãy nhắn tin trên page này nhé"
 
   utter_graduation_cetificate:
-  - text: 3 loại chứng chỉ bạn cần có đó là chứng chỉ tiếng anh b1, chứng chỉ giáo dục quốc phòng, chứng chỉ thể dục nhé
+  - text: "3 loại chứng chỉ bạn cần có đó là chứng chỉ tiếng anh b1, chứng chỉ giáo dục quốc phòng, chứng chỉ thể dục nhé"
 
   utter_ask_point:
-  - text: "1.Để tính điểm trung bình chung học kỳ và điểm trung bình chung tích lũy, mức điểm chữ
+  - text: "1. Để tính điểm trung bình chung học kỳ và điểm trung bình chung tích lũy, mức điểm chữ
               của mỗi học phần phải được quy đổi qua điểm số theo hệ 4 như hình bên dưới."
-    image: "https://photos.google.com/search/_tra_/photo/AF1QipM1WPpeq5DhLxkX_RUDgabHHp2Xdj0LglvmkkRD"
+    image: "https://i.imgur.com/3gj7Kmb.jpg"
   utter_ask_point_1:
-  - text: "2.	Điểm trung bình chung học kỳ và điểm trung bình chung tích lũy được tính theo công thức
+  - text: "2. Điểm trung bình chung học kỳ và điểm trung bình chung tích lũy được tính theo công thức
                 sau và được làm tròn đến 2 chữ số thập phân:"
+    image: "https://i.imgur.com/2PErNWV.jpg"
 
   utter_schoolarship_condition:
   - text:  "Đx học tập SV phải đăng ký tối thiểu 14 tín chỉ / 01 học kỳ.\n
@@ -54,7 +55,7 @@ responses:
             "
 
   utter_shoolarship_type:
-  - text: Các loại học bổng (học bổng ở cuối mỗi học kì, học bổng từ các doanh nghiệp, ...) Bạn theo dõi trên trang tín chỉ để biết thêm nhé .
+  - text: "Các loại học bổng (học bổng ở cuối mỗi học kì, học bổng từ các doanh nghiệp, ...) Bạn theo dõi trên trang tín chỉ để biết thêm nhé ."
 
   utter_hoc_phan_dang_ki:
   - text: "Sinh viên thực hiện việc đăng ký bình thường các học phần thông qua Website Trang thông tin đào tạo tín chỉ
@@ -76,11 +77,11 @@ responses:
             hạn đăng ký; số lượng sinh viên đăng ký chưa vượt quá tối đa cho phép của lớp học phần."
 
   utter_hoc_phan_huy:
-  - text: Việc rút bớt học phần trong khối lượng học tập đã đăng ký chỉ được chấp nhận
+  - text: "Việc rút bớt học phần trong khối lượng học tập đã đăng ký chỉ được chấp nhận
       trong tuần thứ 3 của học kỳ chính; trong tuần thứ 2 của học kỳ phụ và không vi phạm quy
       định đăng ký khối lượng học tập tối thiểu của học kỳ. Ngoài thời hạn trên học phần vẫn
       được giữ nguyên như trong thời khóa biểu, nếu sinh viên không đi học các học phần này
-      thì được xem như tự ý bỏ học và phải nhận điểm F
+      thì được xem như tự ý bỏ học và phải nhận điểm F"
   utter_condition_hoc_phan_huy:
   - text: "Điều kiện rút bớt các học phần đã đăng ký: \n
             - Sinh viên phải tự viết đơn (theo mẫu) gửi Phòng Đào tạo Đại học;\n

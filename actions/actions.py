@@ -35,7 +35,7 @@ class ActionGraduationCondition(Action):
                không chuyên về thể dục - thể thao, ngoại ngữ không chuyên.\n
                - Có đơn gửi Phòng Đào tạo Đại học đề nghị được xét tốt nghiệp trong trường hợp
                đủ điều kiện tốt nghiệp sớm hoặc muộn so với thời gian thiết kế của khóa học.
-                        """
+               """
         if entities == []:
             message = text
         elif entities[0]['value'] != 'classification':
