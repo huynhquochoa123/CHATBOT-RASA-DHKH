@@ -60,6 +60,7 @@ responses:
   utter_hoc_phan_dang_ki:
   - text: "Sinh viên thực hiện việc đăng ký bình thường các học phần thông qua Website Trang thông tin đào tạo tín chỉ
           \n và thực hiện những quy định"
+
   utter_condition_hoc_phan_dang_ki:
   - text: "- Trước khi đăng ký học phần qua mạng, sinh viên cần rà soát lại kết quả học tập
             của mình, đối chiếu với chương trình đào tạo để xem trong các lĩnh vực kiến thức đã và
@@ -94,7 +95,7 @@ responses:
           nghiệp vào các tháng 2, 6 và 10."
 
   utter_fallback:
-    - text: Xin lỗi, Admin chưa hiểu ý muốn của bạn. Bạn có thể hỏi rõ lại được không ?
+    - text: "Xin lỗi, Admin chưa hiểu ý muốn của bạn. Bạn có thể hỏi rõ lại được không ?"
 
 actions:
 - utter_greet
