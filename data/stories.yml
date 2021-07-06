@@ -73,3 +73,8 @@ stories:
   steps:
   - intent: ask_ability
   - action: utter_ask_ability
+
+- story: ask_info_giao_vien
+  steps:
+  - intent: ask_info_teacher
+  - action: action_ask_info_teacher

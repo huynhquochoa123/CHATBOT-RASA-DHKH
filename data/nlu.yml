@@ -185,4 +185,11 @@ nlu:
     - Làm thế nào để hủy học phần
     - hủy học phần
 
+- intent: ask_info_teacher
+  examples: |
+    - Môn học [đồ họa máy tính] (subjects) có thầy cô nào dạy.
+    - Môn [Toán học rời rạc] (subjects) có ai dạy.
+    - Môn [Nguyên lý hệ điều hành) (subjects) có những ai dạy .
+    - Môn [Mạng máy tính) (subjects) có những ai dạy .
+    - Môn [Ngôn ngữ truy vấn có cấu trúc (SQL)] (subjects) có thầy cô nào dạy
 # End học phần

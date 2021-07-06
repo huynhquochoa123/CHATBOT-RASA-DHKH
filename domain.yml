@@ -15,6 +15,7 @@ intents:
   - point
   - hoc_phan_dang_ki
   - hoc_phan_huy
+  - ask_info_teacher
 
 responses:
   utter_greet:
@@ -93,7 +94,6 @@ responses:
   utter_graduation_ask_time:
     - text: "Hằng năm sau khi kết thúc các học kỳ, sinh viên được xét và công nhận tốt
           nghiệp vào các tháng 2, 6 và 10."
-
   utter_fallback:
     - text: "Xin lỗi, Admin chưa hiểu ý muốn của bạn. Bạn có thể hỏi rõ lại được không ?"
 
@@ -116,9 +116,11 @@ actions:
 - utter_condition_hoc_phan_huy
 - utter_fallback
 - action_graduation_condition
+- action_ask_info_teacher
 
 entities:
   - score_graduation
+  - subjects
 
 session_config:
   session_expiration_time: 60
