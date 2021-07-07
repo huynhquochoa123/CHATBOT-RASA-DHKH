@@ -5,13 +5,15 @@
 # https://rasa.com/docs/rasa/custom-actions
 
 from typing import Any, Text, Dict, List
-
+import psql as db
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+from underthesea import pos_tag
+import difflib
 
-# from underthesea import ner
-from pprint import pprint
 
+def diff_check(orig_word: str, target_word: str) -> float:
+    return difflib.SequenceMatcher(None, orig_word, target_word).ratio()
 
 class ActionGraduationCondition(Action):
     def name(self) -> Text:
@@ -60,4 +62,45 @@ class ActionGraduationCondition(Action):
         dispatcher.utter_message(text=message)
         return []
 
+
+class GetInfoTeacher(Action):
+    def name(self) -> Text:
+        return "action_ask_info_teacher"
+
+    def get_subject_from_text(self, pos_tag_text):
+        list_noun_text = [pos_tag_text[i][0] for i in range(len(pos_tag_text)) if pos_tag_text[i][1] == 'N']
+        list_subjects_from_db = db.get_list_subject()
+        arr = []
+        text = ''
+        for item in list_noun_text:
+            for i in range(len(list_subjects_from_db)):
+                if diff_check(list_subjects_from_db[i][0], item) > 0.65:
+                    arr.append(list_subjects_from_db[i][0]) 
+        if len(arr) > 1:
+            text = list(set(arr))[0]
+        elif len(arr) == 1:
+            text = arr[0]
+        else:
+            text = '0'
+        return text
+
+    def response_message_1(self, latest_message):
+        list_pos_tag_text = pos_tag(latest_message)
+        subjects = self.get_subject_from_text(list_pos_tag_text)
+        record = db.get_info_gv_from_mon_hoc(subjects)
+        if subjects == '0' or len(record) == 0:
+            message = 'Chưa có thông tin giáo viên cho môn học này bạn nhé !'
+            return message
+        teacher =  ', '.join([', '.join(i) for i in record])
+        message = "Môn học " + subjects + ' có thầy/cô ' + teacher + 'dạy nhé. Bạn có thể lên trang tín chỉ để đăng kí những thầy,cô này .'
+        return message
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        latest_message = (tracker.latest_message)['text']
+        message = self.response_message_1(latest_message)
+
+        dispatcher.utter_message(text=message)
+        return []
 
