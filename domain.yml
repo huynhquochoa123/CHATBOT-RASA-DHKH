@@ -16,6 +16,7 @@ intents:
   - hoc_phan_dang_ki
   - hoc_phan_huy
   - ask_info_teacher
+  - ask_info_student
 
 responses:
   utter_greet:
@@ -117,6 +118,7 @@ actions:
 - utter_fallback
 - action_graduation_condition
 - action_ask_info_teacher
+- action_ask_info_student
 
 entities:
   - score_graduation
