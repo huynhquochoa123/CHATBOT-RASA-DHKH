@@ -78,3 +78,8 @@ stories:
   steps:
   - intent: ask_info_teacher
   - action: action_ask_info_teacher
+
+- story: ask_info_student
+  steps:
+  - intent: ask_info_student
+  - action: action_ask_info_student

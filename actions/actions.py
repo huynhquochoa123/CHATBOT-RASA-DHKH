@@ -3,7 +3,7 @@
 #
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
-
+import re
 from typing import Any, Text, Dict, List
 import psql as db
 from rasa_sdk import Action, Tracker
@@ -84,7 +84,7 @@ class GetInfoTeacher(Action):
             text = '0'
         return text
 
-    def response_message_1(self, latest_message):
+    def response_message(self, latest_message):
         list_pos_tag_text = pos_tag(latest_message)
         subjects = self.get_subject_from_text(list_pos_tag_text)
         record = db.get_info_gv_from_mon_hoc(subjects)
@@ -99,8 +99,59 @@ class GetInfoTeacher(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         latest_message = (tracker.latest_message)['text']
-        message = self.response_message_1(latest_message)
+        message = self.response_message(latest_message)
 
         dispatcher.utter_message(text=message)
         return []
+
+class GetInfoStudent(Action):
+    def name(self) -> Text:
+        return "action_ask_info_student"
+
+    def get_student_code(self, latest_message):
+        split_text = latest_message.split(' ')
+        arr_msv = []
+        for text in split_text:
+            if re.match('[1-9]{2}[a-zA-Z]{1}[0-9]{7}', text):
+                arr_msv.append(text)
+        if len(arr_msv) > 0:
+            return arr_msv[0]
+        else:
+            return '0'
+
+    def get_D_chu(self, score):
+        if score == 4:
+            return 'A'
+        elif score == 3:
+            return 'B'
+        elif score == 2:
+            return 'C'
+        else:
+            return 'D'
+
+    def format_text(self,list_subject_score):
+        str = ''
+        for item in list_subject_score:
+            str += item[0] +' - ' +self.get_D_chu(item[1]) +'\n'
+        return str
+
+    def response_message(self, latest_message):
+        student_code = self.get_student_code(latest_message)
+        list_subject_score = db.get_info_student(student_code)
+        if student_code == '0' or len(list_subject_score) == 0:
+            return "Không tìm thấy tên học phần và mã sinh viên tương ứng !."
+        else:
+            str_list_subject_score = self.format_text(list_subject_score)
+            message = "Tên học phần và điểm số của " + student_code + ' ' + str_list_subject_score
+            return message
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        latest_message = (tracker.latest_message)['text']
+        message = self.response_message(latest_message)
+
+        dispatcher.utter_message(text=message)
+        return []
+
 

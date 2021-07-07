@@ -192,4 +192,14 @@ nlu:
     - Môn [Nguyên lý hệ điều hành) (subjects) có những ai dạy .
     - Môn [Mạng máy tính) (subjects) có những ai dạy .
     - Môn [Ngôn ngữ truy vấn có cấu trúc (SQL)] (subjects) có thầy cô nào dạy
+
+- intent: ask_info_student
+  examples: |
+    - Thông tin điểm và tên học phần của sinh viên có mã là 17T1021229
+    - Thông tin điểm và tên học phần của sinh viên A
+    - Số điểm học phần cần của sinh viên A
+    - Số điểm học phần cần của sinh viên N
+    - Tên học phần và số điểm của sinh viên có mã là
+    - Thông tin điểm và tên học phần của sinh viên B
+    - Thông tin điểm và tên học phần của sinh viên c
 # End học phần

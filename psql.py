@@ -1,10 +1,6 @@
 import psycopg2
 from underthesea import pos_tag
 
-textwr = 'Môn Pháp luật Việt Nam đại cương có thầy cô nào dạy'
-
-# print(pos_tag(textwr))
-
 def create_connection():
 	""" create a database connection to a postgreSQL database """
 	conn = None
@@ -61,6 +57,21 @@ def get_list_subject():
 	except:
 		conn.rollback()
 
+def get_info_student(student_code):
+	conn = create_connection()
+	try:
+		cur = conn.cursor()
+		sql = """ select hocphan.tenhocphan, score.score from score 
+					join hocphan on score.mahocphan = hocphan.mahocphan
+				  where score.masinhvien= %s
+	          """
+		cur.execute(sql, (student_code,))
+		conn.commit()
+		records = cur.fetchall()
+		return records
+	except:
+		conn.rollback()
+
 # if __name__ == '__main__':
 # 	record = get_info_gv_from_mon_hoc('%t%o%á%n%r%ờ%i%r%ạ%c%')
 #
@@ -68,4 +79,6 @@ def get_list_subject():
 # 	text = "Môn học " +
 # 	print(sr)
 # print(get_list_subject())
+
+print(get_info_student('17T1021112'))
 
