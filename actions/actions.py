@@ -74,8 +74,8 @@ class GetInfoTeacher(Action):
         text = ''
         for item in list_noun_text:
             for i in range(len(list_subjects_from_db)):
-                if diff_check(list_subjects_from_db[i][0], item) > 0.65:
-                    arr.append(list_subjects_from_db[i][0]) 
+                if diff_check(list_subjects_from_db[i][0], item) >= 0.6:
+                    arr.append(list_subjects_from_db[i][0])
         if len(arr) > 1:
             text = list(set(arr))[0]
         elif len(arr) == 1:
